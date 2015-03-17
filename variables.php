@@ -19,9 +19,9 @@ $regularHTML = <<<_HTML
     </ul>
   </div>
 
-<div class="gt-accordion">
+<div class=gt-accordion>
   <h4>Closure Types</h4>
-  <div><img src="https://s3.amazonaws.com/sstrapfiles/staticresources/closures/full.jpg" /></div>
+  <div><img src=https://s3.amazonaws.com/sstrapfiles/staticresources/closures/full.jpg></div>
 
   <h4>Get the Perfect Size</h4>
   <div>
@@ -33,8 +33,8 @@ $regularHTML = <<<_HTML
     </p>
 
     <h6>Side Notes</h6>
-    <p>If you are in-between sizes, round down to the nearest size. Please remember not to compensate for slack as we do that here in-house based on your true size.  Lastly, if you have any questions for our team please shoot us an email at <a href="mailto: customerservice@survivalstraps.com">customerservice@survivalstraps.com</a> or give us a ring at 1-800-971-3360 and we will gladly walk through the steps with you.</p>
-    <img width="529" height="487" alt="" src="https://s3.amazonaws.com/sstrapfiles/staticresources/sizing_chart.jpg" />
+    <p>If you are in-between sizes, round down to the nearest size. Please remember not to compensate for slack as we do that here in-house based on your true size.  Lastly, if you have any questions for our team please shoot us an email at <a href=mailto: customerservice@survivalstraps.com>customerservice@survivalstraps.com</a> or give us a ring at 1-800-971-3360 and we will gladly walk through the steps with you.</p>
+    <img width=529 height=487 src=https://s3.amazonaws.com/sstrapfiles/staticresources/sizing_chart.jpg>
   </div>
 </div>
 _HTML;
@@ -58,10 +58,10 @@ $lightdutyHTML = <<<_HTML
 		</ul>
 	</div>
 
-<div class="gt-accordion">
+<div class=gt-accordion>
 	<h4>Closure Types</h4>
 	<div>
-		<img src="https://s3.amazonaws.com/sstrapfiles/staticresources/closures.jpg" />
+		<img src=https://s3.amazonaws.com/sstrapfiles/staticresources/closures.jpg>
 	</div>
 
 	<h4>Get the Perfect Size</h4>
@@ -74,8 +74,8 @@ $lightdutyHTML = <<<_HTML
 		</p>
 
 		<h6>Side Notes</h6>
-		<p>If you are in-between sizes, round down to the nearest size. Please remember not to compensate for slack as we do that here in-house based on your true size.  Lastly, if you have any questions for our team please shoot us an email at <a href="mailto: customerservice@survivalstraps.com">customerservice@survivalstraps.com</a> or give us a ring at 1-800-971-3360 and we will gladly walk through the steps with you.</p>
-		<img width="529" height="487" alt="" src="https://s3.amazonaws.com/sstrapfiles/staticresources/sizing_chart.jpg" />
+		<p>If you are in-between sizes, round down to the nearest size. Please remember not to compensate for slack as we do that here in-house based on your true size.  Lastly, if you have any questions for our team please shoot us an email at <a href=mailto: customerservice@survivalstraps.com>customerservice@survivalstraps.com</a> or give us a ring at 1-800-971-3360 and we will gladly walk through the steps with you.</p>
+		<img width=529 height=487 src=https://s3.amazonaws.com/sstrapfiles/staticresources/sizing_chart.jpg>
 	</div>
 
 </div>
@@ -100,10 +100,10 @@ $wideHTML = <<<_HTML
 		</ul>
 	</div>
 
-<div class="gt-accordion">
+<div class=gt-accordion>
 	<h4>Closure Types</h4>
 	<div>
-		<img src="https://s3.amazonaws.com/sstrapfiles/staticresources/closures/full.jpg" />
+		<img src=https://s3.amazonaws.com/sstrapfiles/staticresources/closures/full.jpg>
 	</div>
 
 	<h4>Get the Perfect Size</h4>
@@ -116,9 +116,9 @@ $wideHTML = <<<_HTML
 		</p>
 
 		<h6>Side Notes</h6>
-		<p>If you are in-between sizes, round down to the nearest size. Please remember not to compensate for slack as we do that here in-house based on your true size.  Lastly, if you have any questions for our team please shoot us an email at <a href="mailto: customerservice@survivalstraps.com">customerservice@survivalstraps.com</a> or give us a ring at 1-800-971-3360 and we will gladly walk through the steps with you.</p>
+		<p>If you are in-between sizes, round down to the nearest size. Please remember not to compensate for slack as we do that here in-house based on your true size.  Lastly, if you have any questions for our team please shoot us an email at <a href=mailto: customerservice@survivalstraps.com>customerservice@survivalstraps.com</a> or give us a ring at 1-800-971-3360 and we will gladly walk through the steps with you.</p>
 
-		<img width="529" height="487" alt="" src="https://s3.amazonaws.com/sstrapfiles/staticresources/sizing_chart.jpg" />
+		<img width=529 height=487 src=https://s3.amazonaws.com/sstrapfiles/staticresources/sizing_chart.jpg>
 
 	</div>
 
@@ -171,22 +171,22 @@ _HTML;
 $necklaceHTML = <<<_HTML
 <h4>More Product Information</h4>
 	<div>
-		<p>The Survival Straps® Necklace is the perfect way to show off one of our great military-style dog tags around your neck. We make them standard with a light duty shackle attached. They carry approximately 12' of paracord and you have the choice of either 21" or 24" in length. The dog tag is free floating on a stainless ring.</p>
+		<p>The Survival Straps® Necklace is the perfect way to show off one of our great military-style dog tags around your neck. We make them standard with a light duty shackle attached. They carry approximately 12' of paracord and you have the choice of either 21 or 24 in length. The dog tag is free floating on a stainless ring.</p>
 	</div>
 
-<div class="gt-accordion">
+<div class=gt-accordion>
 	<h4>Closure Styles</h4>
 	<div>
-		<img src="https://s3.amazonaws.com/sstrapfiles/staticresources/necklace_closure.jpg" />
+		<img src=https://s3.amazonaws.com/sstrapfiles/staticresources/necklace_closure.jpg>
 	</div>
 </div>
 _HTML;
 
 $neckcordHTML = <<<_HTML
-<div class="gt-accordion">
+<div class=gt-accordion>
 	<h4>More Product Information</h4>
 	<div>
-		<p>The Survival Straps® Neck Cord is the perfect way to have a piece of paracord handy, and a great way to show what is important to you. We make them standard with a breakaway attachment for safety. They are 26" in total length.  We affix the logo to a stainless steel military spec dog tag that is made to last. It will not rust, scratch, or show fingerprints.</p>
+		<p>The Survival Straps® Neck Cord is the perfect way to have a piece of paracord handy, and a great way to show what is important to you. We make them standard with a breakaway attachment for safety. They are 26 in total length.  We affix the logo to a stainless steel military spec dog tag that is made to last. It will not rust, scratch, or show fingerprints.</p>
 	</div>
 </div>
 _HTML;
