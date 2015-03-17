@@ -22,12 +22,11 @@ $product_prices = array('24.99', '24.99', '26.99', '19.95', '12.95','21.95','29.
 
 $count = 0;
 
-	echo "<pre>";
-
 foreach($product_type_title as $title) {
 
+
 		$url = seoUrl($title);
-		$html = "";
+		$html = ${$product_types[$count].'HTML'};
 		$vendor = $new_product_production;
 		$type = $new_product_type;
 		$tags = $product_types[$count];
@@ -43,9 +42,6 @@ foreach($product_type_title as $title) {
 		++$count;
 
 	}
-
-	echo "</pre>";
-
 
 --$sku;
 $sku = number_format($sku,0,'','');
