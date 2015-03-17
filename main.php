@@ -22,6 +22,8 @@ $product_prices = array('24.99', '24.99', '26.99', '19.95', '12.95','21.95','29.
 
 $count = 0;
 
+	echo "<pre>";
+
 foreach($product_type_title as $title) {
 
 		$url = seoUrl($title);
@@ -34,9 +36,7 @@ foreach($product_type_title as $title) {
 		$imgalt = $title;
 
 
-echo <<<_OUTPUT
-$url,$title,"$html",$vendor,$type,$tags,FALSE,Title,Default Title,,,,,$sku,0,,1,deny,manual,$price,,TRUE,TRUE,,$img,$imgalt,FALSE,,,,,,,,,,,,,,,,,lb\n
-_OUTPUT;
+			echo "$url,$title,\"$html\",$vendor,$type,$tags,FALSE,Title,Default Title,,,,,$sku,0,,1,deny,manual,$price,,TRUE,TRUE,,$img,$imgalt,FALSE,,,,,,,,,,,,,,,,,lb\n";
 
 		++$sku;
 		$sku = number_format($sku,0,'','');
@@ -44,9 +44,12 @@ _OUTPUT;
 
 	}
 
+	echo "</pre>";
+
+
 --$sku;
 $sku = number_format($sku,0,'','');
-echo "<br><br>$count total products added.<br><br>$sku";
 
+	echo "<br><br>$count total products added.<br><br>$sku";
 
 ?>
