@@ -12,4 +12,9 @@ function seoUrl($string) {
     return $string;
 }
 
+function trimHereDoc($t)
+ {
+ return implode("", array_map('trim', explode("\n", $t)));
+ }
+
 ?>
