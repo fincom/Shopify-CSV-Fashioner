@@ -1,8 +1,9 @@
 <?php
 
+// PHP throws an error if $switch isn't set before the switch, but I like default! 
 ini_set("display_errors", 0);
 
-// seoUrl
+// seoUrl, timeHereDoc
 include 'functions.php';
 
 // Include HTML for each product type: 
@@ -11,12 +12,11 @@ include 'variables.php';
 
 $new_products = array('Police SWAT', 'Police Hostage Negotiator', 'Police BOMB/EOD Team', 'Police Motor Unit', 'Police 1*', 'Police Diver', 'Police K9');
 $new_product_type = "Law Enforcement";
-$new_product_production = "Pre-decal";
+$new_product_production = "Pre-sticker";
 $sku = "201110000003180";
 
 foreach($new_products as $new_product_name) 
 	{
-
 
 		$new_product_name_friendly = seoUrl($new_product_name);
 
@@ -32,7 +32,7 @@ foreach($new_products as $new_product_name)
 				foreach($product_type_title as $title) 
 					{
 
-						echo "<tr><td>$title</td><td>$sku</td>";
+						echo "<tr><td>$sku</td><td>$title</td><td>$new_product_production</td>";
 
 						++$sku;
 						$sku = number_format($sku,0,'','');
@@ -44,7 +44,9 @@ foreach($new_products as $new_product_name)
 			break;
 
 			case 'img':
+
 				echo "<pre>$new_product_name_friendly\n";
+
 			break;
 			
 			default:
@@ -62,7 +64,7 @@ foreach($new_products as $new_product_name)
 						$imgalt = $title;
 
 
-							echo "$url,$title,\"$html\",$vendor,$type,$tags,FALSE,Title,Default Title,,,,,$sku,0,,1,deny,manual,$price,,TRUE,TRUE,,$img,$imgalt,FALSE,,,,,,,,,,,,,,,,,lb\n";
+						echo "$url,$title,\"$html\",$vendor,$type,$tags,FALSE,Title,Default Title,,,,,$sku,0,,1,deny,manual,$price,,TRUE,TRUE,,$img,$imgalt,FALSE,,,,,,,,,,,,,,,,,lb\n";
 
 						++$sku;
 						$sku = number_format($sku,0,'','');
@@ -73,7 +75,5 @@ foreach($new_products as $new_product_name)
 				break;
 		}
 	}
-
-
 
 ?>
