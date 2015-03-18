@@ -12,9 +12,15 @@ function seoUrl($string) {
     return $string;
 }
 
-function trimHereDoc($t)
- {
- return implode("", array_map('trim', explode("\n", $t)));
- }
+function trimHereDoc($string) {
+	return implode("", array_map('trim', explode("\n", $string)));
+}
+
+function incrementSku($string) {
+	//Increment by 1
+	++$string;
+	//Format it so it doesn't display as a float
+	return number_format($string,0,'','');
+}
 
 ?>

@@ -26,16 +26,15 @@ foreach($new_products as $new_product_name)
 
 		$count = 0;
 
-		switch ($_GET['switch']) {
+		switch($_GET['switch']) {
 			case 'sku':
 				echo "<table>";
 				foreach($product_type_title as $title) 
 					{
 
-						echo "<tr><td>$sku</td><td>$title</td><td>$new_product_production</td>";
+						echo "<tr><td>$sku</td><td>$title</td><td>$new_product_production</td></tr>";
 
-						++$sku;
-						$sku = number_format($sku,0,'','');
+						$sku = incrementSku($sku);
 						++$count;
 
 					}
@@ -66,10 +65,8 @@ foreach($new_products as $new_product_name)
 
 						echo "$url,$title,\"$html\",$vendor,$type,$tags,FALSE,Title,Default Title,,,,,$sku,0,,1,deny,manual,$price,,TRUE,TRUE,,$img,$imgalt,FALSE,,,,,,,,,,,,,,,,,lb\n";
 
-						++$sku;
-						$sku = number_format($sku,0,'','');
+						$sku = incrementSku($sku);
 						++$count;
-
 					}
 
 				break;
