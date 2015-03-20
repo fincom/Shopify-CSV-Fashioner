@@ -21,9 +21,8 @@ foreach($new_products as $new_product_name)
 
 		$new_product_name_friendly = seoUrl($new_product_name);
 
-		// Removed "Necklace - $new_product_name", and necklace from the arrays
-		$product_type_title = array("Regular Survival Bracelet™ - $new_product_name", "Light Duty Survival Bracelet™ - $new_product_name", "Wide Survival Bracelet™ - $new_product_name", "Key Fob - $new_product_name", "Gear Tag - $new_product_name", "Neck ID Lanyard - $new_product_name", "Neck Cord - $new_product_name");
-		$product_types = array('regular', 'lightduty', 'wide', 'fob', 'geartag', 'neckid', 'neckcord');
+		$product_type_title = array("Regular Survival Bracelet™ - $new_product_name", "Light Duty Survival Bracelet™ - $new_product_name", "Wide Survival Bracelet™ - $new_product_name", "Key Fob - $new_product_name", "Gear Tag - $new_product_name", "Neck ID Lanyard - $new_product_name", "Necklace - $new_product_name", "Neck Cord - $new_product_name");
+		$product_types = array('regular', 'lightduty', 'wide', 'fob', 'geartag', 'neckid', 'necklace', 'neckcord');
 		$product_prices = array('24.99', '24.99', '26.99', '19.95', '12.95','21.95','29.99','14.95');
 
 		$count = 0;
@@ -62,9 +61,9 @@ foreach($new_products as $new_product_name)
 						$tags = $product_types[$count];
 						$price = $product_prices[$count];
 
-
 						echo "$url,$title,\"$html\",$vendor,$type,$tags,FALSE,Title,Default Title,,,,,$sku,0,,1,deny,manual,$price,,TRUE,TRUE,,,,FALSE,,,,,,,,,,,,,,,,,lb\n";
 
+						// Upload product photos based on the new_product_colors array
 						foreach($new_product_colors as $imgcolor) {
 							$img = "https://sstrapfiles.s3.amazonaws.com/shopify/product_photos/" . $new_product_name_friendly . "_" . $imgcolor . "/" . $product_types[$count] . ".jpg";
 							echo "$url,,,,,,,,,,,,,,,,,,,,,,,,$img,,,,,,,,,,,,,,,,,,,\n";
