@@ -61,11 +61,15 @@ foreach($new_products as $new_product_name)
 						$type = $new_product_type;
 						$tags = $product_types[$count];
 						$price = $product_prices[$count];
-						$img1 = "https://sstrapfiles.s3.amazonaws.com/shopify/product_photos/" . $new_product_name_friendly . "/" . $product_types[$count] . ".jpg";
-						$imgalt = $title;
 
 
-						echo "$url,$title,\"$html\",$vendor,$type,$tags,FALSE,Title,Default Title,,,,,$sku,0,,1,deny,manual,$price,,TRUE,TRUE,,$img1,$imgalt,FALSE,,,,,,,,,,,,,,,,,lb\n";
+						echo "$url,$title,\"$html\",$vendor,$type,$tags,FALSE,Title,Default Title,,,,,$sku,0,,1,deny,manual,$price,,TRUE,TRUE,,,,FALSE,,,,,,,,,,,,,,,,,lb\n";
+
+						foreach($new_product_colors as $imgcolor) {
+							$img = "https://sstrapfiles.s3.amazonaws.com/shopify/product_photos/" . $new_product_name_friendly . "_" . $imgcolor . "/" . $product_types[$count] . ".jpg";
+							echo "$url,,,,,,,,,,,,,,,,,,,,,,,,$img,,,,,,,,,,,,,,,,,,,\n";
+						}
+
 
 						$sku = incrementSku($sku);
 						++$count;
