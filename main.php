@@ -10,11 +10,12 @@ include 'functions.php';
 //  regular, lightduty, wide, fob, neckid, necklace, neckcord
 include 'variables.php';
 
-$new_products = array('USMC', 'White Semper Fi', 'Red Semper Fi', 'Gold Semper Fi', 'USMC Semper Fidelis', 'Silver Semper Fi', 'Tan USMC Logo', 'Tan USMC', 'Red USMC', 'USMC Semper Fi');
+$new_products = array('USMC', 'White Semper Fi', 'Red Semper Fi', 'Gold Semper Fi', 'USMC Semper Fidelis', 'Silver Semper Fi', 'Gold USMC Logo', 'Gold USMC', 'Red USMC', 'USMC Semper Fi');
 $new_product_colors = array('black', 'multicam', 'redgold');
 $new_product_type = "USMC";
+$new_product_type_friendly = seoUrl($new_product_type);
 $new_product_production = "Pre-sticker";
-$sku = "201110000003180";
+$sku = "201110000003240";
 
 foreach($new_products as $new_product_name) 
 	{
@@ -46,6 +47,15 @@ foreach($new_products as $new_product_name)
 			case 'img':
 
 				echo "<pre>$new_product_name_friendly\n";
+				// Display the images
+				foreach($product_type_title as $title) {
+					$url = seoUrl($title);
+					foreach($new_product_colors as $imgcolor) {
+						$img = "https://sstrapfiles.s3.amazonaws.com/shopify/product_photos/" . $new_product_type_friendly . "/" . $new_product_name_friendly . "_" . $imgcolor . "/" . $product_types[$count] . ".jpg";
+						echo "<a href=\"$img\"><img src=\"$img\"></a>";
+					}
+					++$count;
+				}
 
 			break;
 			
@@ -53,23 +63,22 @@ foreach($new_products as $new_product_name)
 
 				foreach($product_type_title as $title) 
 					{
-
 						$url = seoUrl($title);
 						$html = trimHereDoc(${$product_types[$count].'HTML'});
 						$vendor = $new_product_production;
 						$type = $new_product_type;
 						$tags = $product_types[$count];
 						$price = $product_prices[$count];
-
+						//Output each line in CSV format
 						echo "$url,$title,\"$html\",$vendor,$type,$tags,FALSE,Title,Default Title,,,,,$sku,0,,1,deny,manual,$price,,TRUE,TRUE,,,,FALSE,,,,,,,,,,,,,,,,,lb\n";
-
+						// Randomize the colors because "mix them up" is the initiative
+						shuffle($new_product_colors);
 						// Upload product photos based on the new_product_colors array
 						foreach($new_product_colors as $imgcolor) {
-							$img = "https://sstrapfiles.s3.amazonaws.com/shopify/product_photos/" . $new_product_name_friendly . "_" . $imgcolor . "/" . $product_types[$count] . ".jpg";
+							$img = "https://sstrapfiles.s3.amazonaws.com/shopify/product_photos/" . $new_product_type_friendly . "/" . $new_product_name_friendly . "_" . $imgcolor . "/" . $product_types[$count] . ".jpg";
 							echo "$url,,,,,,,,,,,,,,,,,,,,,,,,$img,,,,,,,,,,,,,,,,,,,\n";
 						}
-
-
+						// Increment the SKU
 						$sku = incrementSku($sku);
 						++$count;
 					}
