@@ -11,7 +11,7 @@ include 'functions.php';
 include 'variables.php';
 
 $new_products = array('Licensed Nursing Assistant');
-$new_product_colors = array('black');
+$new_product_colors = array('black', 'white');
 $new_product_type = "LNA";
 $new_product_type_friendly = seoUrl($new_product_type);
 $new_product_production = "Pre-sticker";
