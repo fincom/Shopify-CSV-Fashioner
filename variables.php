@@ -183,12 +183,12 @@ $necklaceHTML = <<<_HTML
 _HTML;
 
 $neckcordHTML = <<<_HTML
-<div class=gt-accordion>
-	<h4>More Product Information</h4>
-	<div>
-		<p>The Survival Straps® Neck Cord is the perfect way to have a piece of paracord handy, and a great way to show what is important to you. We make them standard with a breakaway attachment for safety. They are 26 in total length.  We affix the logo to a stainless steel military spec dog tag that is made to last. It will not rust, scratch, or show fingerprints.</p>
-	</div>
+
+<h4>More Product Information</h4>
+<div>
+	<p>The Survival Straps® Neck Cord is the perfect way to have a piece of paracord handy, and a great way to show what is important to you. We make them standard with a breakaway attachment for safety. They are 26'' in total length.  We affix the logo to a stainless steel military spec dog tag that is made to last. It will not rust, scratch, or show fingerprints.</p>
 </div>
+
 _HTML;
 
 ?>
