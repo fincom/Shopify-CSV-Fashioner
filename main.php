@@ -3,7 +3,7 @@
 // seoUrl, timeHereDoc
 include 'functions.php';
 
-// Include HTML for each product type: 
+// Include HTML for each product type:
 //  regular, lightduty, wide, fob, neckid, necklace, neckcord
 include 'variables.php';
 
@@ -14,7 +14,7 @@ $new_product_type_friendly = seoUrl($new_product_type);
 $new_product_production = "Pre-sticker";
 $sku = "201110000003320";
 
-foreach($new_products as $new_product_name) 
+foreach($new_products as $new_product_name)
 	{
 
 		$new_product_name_friendly = seoUrl($new_product_name);
@@ -30,12 +30,12 @@ foreach($new_products as $new_product_name)
 			$switch = $_GET['switch'];
 		} else {
 			$switch = NULL;
-		}		
+		}
 
 		switch($switch) {
 			case 'sku':
 				echo "<table>";
-				foreach($product_type_title as $title) 
+				foreach($product_type_title as $title)
 					{
 
 						echo "<tr><td>$sku</td><td>$title</td><td>$new_product_production</td></tr>";
@@ -50,24 +50,25 @@ foreach($new_products as $new_product_name)
 
 			case 'img':
 
-				echo "<pre>$new_product_name_friendly\n";
+				echo "<pre>$new_product_type_friendly / $new_product_name_friendly\n";
 				// Display the images
 				foreach($product_type_title as $title) {
 					$url = seoUrl($title);
 					foreach($new_product_colors as $imgcolor) {
+						echo "$imgcolor - ";
 						$img = "https://sstrapfiles.s3.amazonaws.com/shopify/product_photos/" . $new_product_type_friendly . "/" . $new_product_name_friendly . "_" . $imgcolor . "/" . $product_types[$count] . ".jpg";
-						echo "<a href=\"$img\"><img src=\"$img\"></a>";
+						echo "<a href=\"$img\"><img src=\"$img\"></a>\n";
 					}
 					++$count;
 				}
 
 			break;
-			
+
 			case 'csv':
 				//Output CSV headers
 				echo "Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,Variant SKU,Variant Grams,Variant Inventory Tracker,Variant Inventory Qty,Variant Inventory Policy,Variant Fulfillment Service,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Variant Barcode,Image Src,Image Alt Text,Gift Card,Google Shopping / MPN,Google Shopping / Age Group,Google Shopping / Gender,Google Shopping / Google Product Category,SEO Title,SEO Description,Google Shopping / AdWords Grouping,Google Shopping / AdWords Labels,Google Shopping / Condition,Google Shopping / Custom Product,Google Shopping / Custom Label 0,Google Shopping / Custom Label 1,Google Shopping / Custom Label 2,Google Shopping / Custom Label 3,Google Shopping / Custom Label 4,Variant Image,Variant Weight Unit\n";
 
-				foreach($product_type_title as $title) 
+				foreach($product_type_title as $title)
 					{
 						$url = seoUrl($title);
 						$html = trimHereDoc(${$product_types[$count].'HTML'});
