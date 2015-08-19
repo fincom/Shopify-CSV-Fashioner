@@ -1,6 +1,6 @@
 # Survival Straps Shopify CSV Fashioner
 
-This is a simple procedural program written in PHP to automate the process of launching multiple new collections at once in Shopify's . It creates a CSV file that can be imported under the Products section of the Shopify dashboard for the full Survival Straps product line:
+This is a simple procedural program written in PHP to automate the process of launching multiple new Survival Straps collections on Shopify. It creates a CSV file that can be imported under the Products section of the Shopify dashboard for the full Survival Straps product line:
 
 * Regular Survival Bracelet™
 * Light Duty Survival Bracelet™
