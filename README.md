@@ -15,18 +15,20 @@ This is a simple procedural program written in PHP to automate the process of la
 
 To get started, open `main.php` and set the following values:
 
-1. Set `$new_products` array to the list of new collections you will want to add.
-2. Set `$new_product_colors` to the color options you want specified in the title of the product (not variants).
-3. Set `$new_product_type` to the product type.
-4. Set `$new_product_production` to the production classification (e.g. Custom Decal, Pre-sticker)
-5. Set `$sku` to the first SKU you want to use.
+1. `$new_products` in an array of new collections you want to add.
+2. `$new_product_colors` is the color options you want specified in the title of the product (not variants).
+3. `$new_product_type` is the product type.
+4. `$new_product_production` is the production classification (e.g. Custom Decal, Pre-sticker)
+5. `$sku` is the first SKU you want to use.
+
+That's it! SEO-friendly URLs, product descriptions, images, SKUs, etc. have all been auto-generated!
 
 ## Usage
 
-`main.php` has 3 switches that are passed through the URL. Open up `index.html` and open them in that order.
+`main.php` has 3 switches that are passed through the URL. Open up `index.html` to get to the links for each of the 3 main functions:
 
 * **Shopify CSV Fashioner** is the main program that spits out a CSV file to import into Shopify.
-* **SKUs** will generate a table of SKUs that you can copy into the master SKU spreadsheet.
+* **SKUs** will generate a table of SKUs that you can paste into the master SKU spreadsheet.
 * **Images** will display the images uploaded to S3 so you can check that they work before Shopify tries to download them (see directions below).
 
 ## Adding Images to a Collection
