@@ -1,0 +1,64 @@
+# Survival Straps Shopify CSV Fashioner
+
+This is a simple procedural program written in PHP to automate the process of launching multiple new collections at once in Shopify's . It creates a CSV file that can be imported under the Products section of the Shopify dashboard for the full Survival Straps product line:
+
+* Regular Survival Bracelet™
+* Light Duty Survival Bracelet™
+* Wide Survival Bracelet™
+* Key Fob
+* Gear Tag
+* Neck ID Lanyard
+* Necklace
+* Neck Cord
+
+## Setting Up a New Collection
+
+To get started, open `main.php` and set the following values:
+
+1. Set `$new_products` array to the list of new collections you will want to add.
+2. Set `$new_product_colors` to the color options you want specified in the title of the product (not variants).
+3. Set `$new_product_type` to the product type.
+4. Set `$new_product_production` to the production classification (e.g. Custom Decal, Pre-sticker)
+5. Set `$sku` to the first SKU you want to use.
+
+## Usage
+
+`main.php` has 3 switches that are passed through the URL. Open up `index.html` and open them in that order.
+
+* **Shopify CSV Fashioner** is the main program that spits out a CSV file to import into Shopify.
+* **SKUs** will generate a table of SKUs that you can copy into the master SKU spreadsheet.
+* **Images** will display the images uploaded to S3 so you can check that they work before Shopify tries to download them (see directions below).
+
+## Adding Images to a Collection
+
+Open up the [Amazon S3 Management Console](https://console.aws.amazon.com/s3/home?region=us-east-1#) and navigate to `sstrapfiles/shopify/product_photos`. You will need to create a series of folders here based on the values you put into main.php:
+
+```
+$new_product_type/seo-friendly-collection-name_color/
+```
+
+You can find all of that information in the Images link.
+
+Inside of that folder you will need to have a series of .jpg product photos that relate to each product type.
+
+
+* `regular.jpg`
+* `lightduty.jpg`
+* `wide.jpg`
+* `fob.jpg`
+* `geartag.jpg`
+* `neckid.jpg`
+* `necklace.jpg`
+* `neckcord.jpg`
+
+### That's it!
+
+If all the images check out then import your CSV into Shopify and watch as they all magically populate!
+
+## Contributors
+
+This project was created by Eric Patrick while working at Survival Straps in March of 2015. Continued maintenance by Eric Patrick.
+
+## To-do
+
+* Pray it stops working some day so you can code a better one that wasn't hacked together in a fever dream.
