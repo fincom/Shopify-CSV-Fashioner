@@ -1,8 +1,5 @@
 <?php
 
-// PHP throws an error if $switch isn't set before the switch, but I like default! 
-ini_set("display_errors", 0);
-
 // seoUrl, timeHereDoc
 include 'functions.php';
 
@@ -24,11 +21,18 @@ foreach($new_products as $new_product_name)
 
 		$product_type_title = array("Regular Survival Bracelet™ - $new_product_name", "Light Duty Survival Bracelet™ - $new_product_name", "Wide Survival Bracelet™ - $new_product_name", "Key Fob - $new_product_name", "Gear Tag - $new_product_name", "Neck ID Lanyard - $new_product_name", "Necklace - $new_product_name", "Neck Cord - $new_product_name");
 		$product_types = array('regular', 'lightduty', 'wide', 'fob', 'geartag', 'neckid', 'necklace', 'neckcord');
-		$product_prices = array('24.99', '24.99', '26.99', '19.95', '12.95','21.95','29.99','14.95');
+		$product_prices = array('24.99', '24.99', '27.99', '19.95', '12.95','21.95','29.99','14.95');
 
 		$count = 0;
 
-		switch($_GET['switch']) {
+		// It's possible this might squash the error switch() throws later on
+		if (isset($_GET['switch'])) {
+			$switch = $_GET['switch'];
+		} else {
+			$switch = NULL;
+		}		
+
+		switch($switch) {
 			case 'sku':
 				echo "<table>";
 				foreach($product_type_title as $title) 
