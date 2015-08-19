@@ -11,17 +11,19 @@ This is a simple procedural program written in PHP to automate the process of la
 * Necklace
 * Neck Cord
 
+
 ## Setting Up a New Collection
 
 To get started, open `main.php` and set the following values:
 
 1. `$new_products` in an array of new collections you want to add.
-2. `$new_product_colors` is the color options you want specified in the title of the product (not variants).
+2. `$new_product_colors` is an array for each type of image variant you want for the product (e.g. black or white dog tags).
 3. `$new_product_type` is the product type.
 4. `$new_product_production` is the production classification (e.g. Custom Decal, Pre-sticker)
 5. `$sku` is the first SKU you want to use.
 
 That's it! SEO-friendly URLs, product descriptions, images, SKUs, etc. have all been auto-generated!
+
 
 ## Usage
 
@@ -30,6 +32,7 @@ That's it! SEO-friendly URLs, product descriptions, images, SKUs, etc. have all 
 * **Shopify CSV Fashioner** is the main program that spits out a CSV file to import into Shopify.
 * **SKUs** will generate a table of SKUs that you can paste into the master SKU spreadsheet.
 * **Images** will display the images uploaded to S3 so you can check that they work before Shopify tries to download them (see directions below).
+
 
 ## Adding Images to a Collection
 
@@ -53,14 +56,12 @@ Inside of that folder you will need to have a series of .jpg product photos that
 * `necklace.jpg`
 * `neckcord.jpg`
 
+
 ### That's it!
 
 If all the images check out then import your CSV into Shopify and watch as they all magically populate!
 
+
 ## Contributors
 
-This project was created by Eric Patrick while working at Survival Straps in March of 2015. Continued maintenance by Eric Patrick.
-
-## To-do
-
-* Pray it stops working some day so you can code a better one that wasn't hacked together in a fever dream.
+This project was created by Eric Patrick while working at Survival Straps in March of 2015. Special thanks to GitHub for making one of my first public programming projects using Git an exciting experience!
