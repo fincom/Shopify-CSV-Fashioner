@@ -32,7 +32,7 @@ That's it! SEO-friendly URLs, product descriptions, images, SKUs, etc. have all 
 
 ## Usage
 
-`main.php` has 3 switches that are passed through the URL. Open up `index.html` to get to the links for each of the 3 main functions:
+`main.php` has 3 switches that are passed through the URL. Open up http://192.168.33.10/ to get to the links for each of the 3 main functions:
 
 * **Shopify CSV Fashioner** is the main program that spits out a CSV file to import into Shopify.
 * **SKUs** will generate a table of SKUs that you can paste into the master SKU spreadsheet.
