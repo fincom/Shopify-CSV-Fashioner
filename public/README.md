@@ -12,9 +12,14 @@ This is a simple procedural program written in PHP to automate the process of la
 * Neck Cord
 
 
+## Getting Started
+
+Clone this repository, then open the directory with a command prompt and run `vagrant up`.
+
+
 ## Setting Up a New Collection
 
-To get started, open `main.php` and set the following values:
+To begin setting up a new collection, open `main.php` in an editor and set the following values:
 
 1. `$new_products` in an array of new collections you want to add.
 2. `$new_product_colors` is an array for each type of image variant you want for the product (e.g. black or white dog tags).
