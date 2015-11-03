@@ -21,7 +21,7 @@ foreach($new_products as $new_product_name)
 
 		$product_type_title = array("Regular Survival Bracelet™ - $new_product_name", "Light Duty Survival Bracelet™ - $new_product_name", "Wide Survival Bracelet™ - $new_product_name", "Key Fob - $new_product_name", "Gear Tag - $new_product_name", "Neck ID Lanyard - $new_product_name", "Necklace - $new_product_name", "Neck Cord - $new_product_name");
 		$product_types = array('regular', 'lightduty', 'wide', 'fob', 'geartag', 'neckid', 'necklace', 'neckcord');
-		$product_prices = array('24.99', '24.99', '27.99', '19.95', '12.95','21.95','29.99','14.95');
+		$product_prices = array('29.99', '29.99', '32.99', '19.95', '12.95','21.95','29.95','14.95');
 
 		$count = 0;
 
