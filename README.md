@@ -66,7 +66,3 @@ Inside of that folder you will need to have a series of .jpg product photos that
 
 If all the images check out then import your CSV into Shopify and watch as they all magically populate!
 
-
-## Contributors
-
-This project was created by Eric Patrick while working at Survival Straps in March of 2015. Special thanks to GitHub for making one of my first public programming projects using Git an exciting experience!
